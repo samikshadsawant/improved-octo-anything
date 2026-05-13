@@ -1,0 +1,50 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-app: #f5f5f7;
+  --bg-sidebar: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #6b7280;
+  --color-accent: #7c3aed;
+  --border-light: #e5e7eb;
+  --btn-primary-bg: #111111;
+  --btn-primary-text: #ffffff;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --topbar-height: 64px;
+
+  /* Transitions */
+  --transition-base: 220ms ease;
+  --leading-normal: 1.6;
+
+
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  line-height: var(--leading-normal);
+}
+
+.app-shell { display: flex; min-height: 100vh; }
+.main-wrapper {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-app);
+}
+
+@media (max-width: 767px) {
+  .main-wrapper { margin-left: 0; }
+} 

@@ -1,0 +1,280 @@
+/* ─────────────────────────────
+   LAYOUT
+───────────────────────────── */
+
+.dashboard-layout {
+  min-height: 100vh;
+  background: #fafafa;
+  width: 100%;
+}
+
+.dashboard-main {
+  width: 100%;
+}
+
+.dashboard-page {
+  padding: 36px 42px 60px;
+}
+
+/* ─────────────────────────────
+   PAGE
+───────────────────────────── */
+
+.feedback-history-page {
+  width: 100%;
+}
+
+/* ─────────────────────────────
+   HEADER
+───────────────────────────── */
+
+.feedback-history-header {
+  margin-bottom: 32px;
+}
+
+.feedback-history-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.feedback-history-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* ─────────────────────────────
+   DESKTOP TABLE
+───────────────────────────── */
+
+.feedback-table-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.feedback-table thead tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.feedback-table th {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: #9ca3af;
+  background: #fafafa;
+}
+
+.feedback-table td {
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.feedback-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─────────────────────────────
+   EMPTY STATE
+───────────────────────────── */
+
+.table-empty-state {
+  text-align: center;
+  padding: 70px 20px !important;
+}
+
+.table-empty-state p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 14px;
+}
+
+.give-feedback-btn {
+  padding: 9px 22px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.give-feedback-btn:hover {
+  background: #f9fafb;
+}
+
+/* ─────────────────────────────
+   STARS
+───────────────────────────── */
+
+.table-rating-stars .star {
+  font-size: 16px;
+}
+
+.table-rating-stars .star.filled {
+  color: #fbbf24;
+}
+
+.table-rating-stars .star.empty {
+  color: #d1d5db;
+}
+
+/* ─────────────────────────────
+   MOBILE
+───────────────────────────── */
+
+.feedback-mobile-list {
+  display: none;
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+@media (max-width: 900px) {
+  .dashboard-page {
+    padding: 24px;
+  }
+
+  .feedback-history-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .feedback-history-header {
+    margin-bottom: 20px;
+  }
+
+  .feedback-history-title {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .feedback-history-subtitle {
+    font-size: 14px;
+  }
+
+  /* Hide table */
+
+  .feedback-table-wrapper {
+    display: none;
+  }
+
+  /* Show cards */
+
+  .feedback-mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+
+  .feedback-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .feedback-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+
+  .feedback-message {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.45;
+  }
+
+  .feedback-rating {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .feedback-rating .star {
+    font-size: 18px;
+  }
+
+  .feedback-rating .star.filled {
+    color: #fbbf24;
+  }
+
+  .feedback-rating .star.empty {
+    color: #d1d5db;
+  }
+
+  .feedback-meta {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .feedback-date {
+    color: #3b82f6;
+  }
+
+  .feedback-dot {
+    color: #9ca3af;
+  }
+
+  /* Mobile Empty State */
+
+  .mobile-empty-state {
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .mobile-empty-state h2 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 16px;
+  }
+
+  .history-btn {
+    padding: 9px 24px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .history-btn:hover {
+    background: #f9fafb;
+  }
+}
