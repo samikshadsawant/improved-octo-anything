@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { UserProvider, useUser } from './context/UserContext';
 
 import Sidebar from './components/Sidebar/Sidebar';
-import Dashboard from './pages/Dashboard/Dashboard';
-import FeedbackHistory from './pages/FeedbackHistory/FeedbackHistory';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import FeedbackHistory from './Pages/FeedbackHistory/FeedbackHistory';
 import Login from './components/Login/Login';
 import { FeedbackProvider } from './context/FeedbackContext';
 
